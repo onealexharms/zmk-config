@@ -2,7 +2,7 @@
 *
 * Copyright (c) 2021 Darryl deHaan
 * SPDX-License-Identifier: MIT
-*
+* Modified by Alex Harms 24 February 2023
 */
 
 #include <behaviors.dtsi>
@@ -16,23 +16,38 @@
   };
 };
 
-/ {
-        keymap {
-                compatible = "zmk,keymap";
+/*
+* Mystery stuff above, my keymap below - AH
+*/
 
-                default_layer {
-                        label = "QWERTY";
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-                        bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
-                        >;
+//Alex's Layers
+#define ALPHA 0
+#define NUM 1
+#define SYMBOL 2
+#define PARENS 3
+#define NAV 4 
+
+#define BTAB LS(TAB)
+#define S_NUM &lt NUM S
+#define D_NAV &lt NAV D
+#define F_SYM &lt SYMBOL F
+#define J_PAR &lt PARENS J
+#define KOMMA &kp COMMA
+#define PERYD &kp DOT
+#define SL4SH &kp SLASH
+
+/ {
+  keymap {
+    compatible = "zmk,keymap";
+
+     default_layer {
+       label = "ALPHA";
+       bindings = <
+&kp CAPS        &kp Q &kp W &kp E &kp R &kp T /* */ &kp Y &kp U &kp I &kp O &kp P     &to ALPHA 
+&mt LCTRL BTAB  &kp A S_NUM D_NAV F_SYM &kp G /* */ &kp H J_PAR &kp K &kp L &kp SEMI  &mt RCTRL APOS
+&kp LSHFT       &kp Z &kp X &kp C &kp V &kp B /* */ &kp N &kp M KOMMA PERYD SL4SH     &kp RSHIFT
+          &mt LALT ESC &mt LCMD ENTER &kp TAB /* */ &kp BSPC &mt RCMD SPACE &kp RALT   
+                  >;
                 };
                 lower_layer {
                         label = "NUMBER";
