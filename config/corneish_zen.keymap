@@ -56,7 +56,7 @@
 #define CTRL_BACKTAB &mt LEFT_CONTROL LS(TAB)
 #define ALT_ESC &mt LALT ESC
 #define CMD_TAB &mt LCMD TAB
-#define CMD_BKSPACE &mt RCMD BSPC
+#define CMD_BACKSPACE &mt RCMD BSPC
 #define R_ALT &kp RALT   
 
 //nice numbers
