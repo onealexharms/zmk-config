@@ -38,6 +38,9 @@
 #define _GRAVE &kp GRAVE
 #define _CARET &kp CARET
 #define _AT_SIGN &kp AT_SIGN
+#define _BANG &kp EXCLAMATION
+#define _HASH &kp HASH
+#define _BACKSLASH &kp BACKSLASH
 #define _PIPE &kp PIPE
 #define _DOLLAR &kp DOLLAR
 #define _PERCENT &kp PERCENT
@@ -142,7 +145,7 @@
 
     &trans  &trans &trans &trans &trans &trans        _MINUS    _DOLLAR      _PERCENT  _CARET _GRAVE     CTRL_SQUOTE
 
-    &trans  &trans &trans &trans &trans &trans        UNDERLINE _EXCLAMATION _AT_SIGN  _HASH  _BACKSLASH _PLUS
+    &trans  &trans &trans &trans &trans &trans        UNDERLINE _BANG        _AT_SIGN  _HASH  _BACKSLASH _PLUS
     
                       &trans _ &trans _ &trans        _SPACE _ CMD_BACKSPACE _ R_ALT
       >; 
