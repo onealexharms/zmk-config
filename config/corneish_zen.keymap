@@ -20,7 +20,7 @@
 
 // Alex's Layers // Layer definitions must remain in this order within the keymap because decisions were made. Sigh.   
 #define ALPHA 0
-#define TO_ALPHA &to ALPHA
+#define _TO_ALPHA_ &to ALPHA
 #define NUMBER 1
 #define SYMBOL 2
 #define PARENS 3
@@ -120,7 +120,7 @@
       label = "ALPHA";
       bindings = <
 
-      _CAPSLOCK_  _Q_ _W_ _E_ _R_ _T_        _Y_   _U_  _I_  _O_  _P_            TO_ALPHA 
+      _CAPSLOCK_  _Q_ _W_ _E_ _R_ _T_        _Y_   _U_  _I_  _O_  _P_           _TO_ALPHA_ 
 
       CTL_BAKTAB  _A_ _S_ _D_ _F_ _G_        _H_   _J_  _K_ _L_ _SEMICOLON     CTL_SQUOTE
 
@@ -163,7 +163,7 @@
 
     __________ __________ __________ L_BRACKET R_BRACKET __________        __________ __________ __________ __________ __________  __________        
 
-    __________ __________ L_ANGLE__ L_PAREN__ R_PAREN__ R_ANGLE       __________ __________ __________ __________ __________  __________        
+    __________ __________ L_ANGLE L_PAREN__ R_PAREN__ R_ANGLE       __________ __________ __________ __________ __________  __________        
 
     __________ __________ __________ L_CURLY   R_CURLY __________       __________ __________ __________ __________ __________  __________       
     
