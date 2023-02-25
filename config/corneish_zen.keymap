@@ -57,10 +57,10 @@
 #define _CAPSLOCK &kp CAPSLOCK
 #define CTRL_SQUOTE &mt RCTRL SINGLE_QUOTE
 #define CTRL_BACKTAB &mt LCTRL LS(TAB)
-#define ALT_ESC &mt LALT ESC
 #define CMD_TAB &mt LCMD TAB
 #define CMD_BACKSPACE &mt RCMD BSPC
-#define R_ALT &kp RALT   
+#define L_ALT_ESC &mt LALT ESC
+#define R_ALT_ESC &kp RALT ESC  
 
 //nice numbers & letters
 #define _0_ &kp KP_NUMBER_0
@@ -118,14 +118,13 @@
 
            L_SHIFT  _Z_ _X_ _C_ _V_ _B_        _N_ _M_ _COMMA _PERIOD _SLASH  R_SHIFT
 
-                 ALT_ESC CMD_TAB _ENTER        _SPACE CMD_BACKSPACE R_ALT 
+                 L_ALT_ESC _ENTER CMD_TAB      CMD_BACKSPACE _SPACE R_ALT_ESC 
       >;
     };
 
-    layer_1 {
+    layer_1 { 
       label = "NUMBER";
       bindings = <
-
     &trans  &trans &trans &trans &trans &trans        _EQUALS   _7_ _8_ _9_ _ENTER  _PLUS   
 
     &trans  &trans &trans &trans &trans &trans        _MINUS    _4_ _5_ _6_ _TAB    _ASTERISK
@@ -146,7 +145,7 @@
 
     &trans  &trans &trans &trans &trans &trans        UNDERLINE _BANG        _AT_SIGN  _HASH  _BACKSLASH _PLUS
     
-                      &trans _ &trans _ &trans        _SPACE _ CMD_BACKSPACE _ R_ALT
+                      &trans _ &trans _ &trans        _SPACE _ CMD_BACKSPACE _ R_ALT_ESC
       >; 
     };
 
