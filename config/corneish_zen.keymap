@@ -31,7 +31,7 @@
 #define ___SPACE__ &kp SPACE
 #define ___TAB____ &kp TAB
 #define __COMMA___ &kp COMMA
-#define __PERIOD__ &kp DOT
+#define __PERIOD__ &kp PERIOD
 #define __TILDE___ &kp TILDE
 #define __GRAVE___ &kp GRAVE
 #define __CARET___ &kp CARET
@@ -124,7 +124,7 @@
 
       CTL_BAKTAB  _A_ _S_ _D_ _F_ _G_        _H_   _J_  _K_ _L_ _SEMICOLON     CTL_SQUOTE
 
-      _L_SHIFT__  _Z_ _X_ _C_ _V_ _B_        _N_ _M_ __COMMA___ __PERIOD___ __SLASH___  _R_SHIFT__
+      _L_SHIFT__  _Z_ _X_ _C_ _V_ _B_        _N_ _M_ __COMMA___ __PERIOD__ __SLASH___  _R_SHIFT__
 
       _L_ALT_ESC ___ENTER__ _CMD_TAB__        CMD_BKSPCE ___SPACE__ _R_ALT_ESC 
       >;
