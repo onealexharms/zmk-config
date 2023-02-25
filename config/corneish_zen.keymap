@@ -63,7 +63,7 @@
 #define CMD_BACKSPACE &mt RCMD BSPC
 #define R_ALT &kp RALT   
 
-//nice numbers
+//nice numbers & letters
 #define _0_ &kp KP_NUMBER_0
 #define _1_ &kp KP_NUMBER_1
 #define _2_ &kp KP_NUMBER_2
@@ -155,13 +155,13 @@
       label = "PARENS";
       bindings = <
 
-    &trans  &trans &trans &trans &trans &trans        _EQUALS   _AMPERSAND   _ASTERISK _PIPE  _TILDE     &trans
+    &trans  &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans  &trans        
 
-    &trans  &trans &trans &trans &trans &trans        _MINUS    _DOLLAR      _PERCENT  _CARET _GRAVE     CTRL_SQUOTE
+    &trans  &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans  &trans        
 
-    &trans  &trans &trans &trans &trans &trans        UNDERLINE _EXCLAMATION _AT_SIGN  _HASH  _BACKSLASH _PLUS
+    &trans  &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans  &trans       
     
-                      &trans _ &trans _ &trans        _SPACE _ CMD_BACKSPACE _ R_ALT
+                      &trans _ &trans _ &trans        &trans _ &trans _ &trans
       >; 
     };
 
@@ -169,13 +169,13 @@
       label = "SYMBOL";
       bindings = <
 
-    &trans  &trans &trans &trans &trans &trans        _EQUALS   _AMPERSAND   _ASTERISK _PIPE  _TILDE     &trans
+    &trans  &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans  &trans        
 
-    &trans  &trans &trans &trans &trans &trans        _MINUS    _DOLLAR      _PERCENT  _CARET _GRAVE     CTRL_SQUOTE
+    &trans  &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans  &trans        
 
-    &trans  &trans &trans &trans &trans &trans        UNDERLINE _EXCLAMATION _AT_SIGN  _HASH  _BACKSLASH _PLUS
+    &trans  &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans  &trans       
     
-                      &trans _ &trans _ &trans        _SPACE _ CMD_BACKSPACE _ R_ALT
+                      &trans _ &trans _ &trans        &trans _ &trans _ &trans
       >; 
     };
   };
