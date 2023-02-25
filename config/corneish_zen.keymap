@@ -166,7 +166,7 @@
     };
 
     layer_4 {
-      label = "SYMBOL";
+      label = "NAVIGATION";
       bindings = <
 
     &trans  &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans  &trans        
