@@ -125,7 +125,7 @@
 
     &trans  &trans &trans &trans &trans &trans        _EQUALS   _7_ _8_ _9_ _ENTER  _PLUS   
 
-    &trans  &trans &trans &trans &trans &trans        _MINUS    _4_ _5_ _6_ _TAB    _MULTIPLY
+    &trans  &trans &trans &trans &trans &trans        _MINUS    _4_ _5_ _6_ _TAB    _ASTERISK
 
     &trans  &trans &trans &trans &trans &trans        UNDERLINE _1_ _2_ _3_ _DOT    _DIVIDE    
 
