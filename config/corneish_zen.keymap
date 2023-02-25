@@ -112,13 +112,13 @@
       label = "ALPHA";
       bindings = <
 
-         _CAPSLOCK  _Q_ _W_ _E_ _R_ _T_        _Y_ _U_ _I_ _O_ _P_            TO_ALPHA 
+         _CAPSLOCK  _Q_ _W_ _E_ _R_ _T_        _Y_   _U_  _I_  _O_  _P_            TO_ALPHA 
 
-      CTRL_BACKTAB  _A_ _S_ _D_ _F_ _G_        _H_ _J_ _K_ _L_ _SEMICOLON     CTRL_SQUOTE
+      CTRL_BACKTAB  _A_ _S_ _D_ _F_ _G_        _H_   _J_  _K_ _L_ _SEMICOLON     CTRL_SQUOTE
 
            L_SHIFT  _Z_ _X_ _C_ _V_ _B_        _N_ _M_ _COMMA _PERIOD _SLASH  R_SHIFT
 
-                 L_ALT_ESC _ENTER CMD_TAB      CMD_BACKSPACE _SPACE R_ALT_ESC 
+               L_ALT_ESC _ENTER CMD_TAB        CMD_BACKSPACE _SPACE R_ALT_ESC 
       >;
     };
 
@@ -153,11 +153,11 @@
       label = "PARENS";
       bindings = <
 
-    &trans  &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans  &trans        
+    &trans  &trans &trans &kp LBKT &kp RBKT        &trans &trans &trans &trans &trans  &trans        
 
-    &trans  &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans  &trans        
+    &trans  &trans &kp LT &kp LPAR &kp RPAR &kp GT       &trans &trans &trans &trans &trans  &trans        
 
-    &trans  &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans  &trans       
+    &trans  &trans &trans &kp LBRC &kp RBRC &trans       &trans &trans &trans &trans &trans  &trans       
     
                       &trans _ &trans _ &trans        &trans _ &trans _ &trans
       >; 
