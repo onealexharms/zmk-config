@@ -60,7 +60,7 @@
 #define CMD_TAB &mt LCMD TAB
 #define CMD_BACKSPACE &mt RCMD BSPC
 #define L_ALT_ESC &mt LALT ESC
-#define R_ALT_ESC &kp RALT ESC  
+#define R_ALT_ESC &mt RALT ESC  
 
 //nice numbers & letters
 #define _0_ &kp KP_NUMBER_0
@@ -145,7 +145,7 @@
 
     &trans  &trans &trans &trans &trans &trans        UNDERLINE _BANG        _AT_SIGN  _HASH  _BACKSLASH _PLUS
     
-                      &trans _ &trans _ &trans        _SPACE _ CMD_BACKSPACE _ R_ALT_ESC
+                      &trans _ &trans _ &trans        CMD_BACKSPACE _SPACE R_ALT_ESC
       >; 
     };
 
