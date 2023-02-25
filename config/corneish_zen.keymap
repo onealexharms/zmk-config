@@ -31,14 +31,13 @@
 // names to make the keymap easier to read
 #define _ENTER &kp ENTER
 #define _SPACE &kp SPACE
-#define _ENTER &kp ENTER
-#define _SPACE &kp SPACE
 #define _TAB &kp TAB
 #define _COMMA &kp COMMA
 #define _PERIOD &kp DOT
 #define _TILDE &kp TILDE
 #define _GRAVE &kp GRAVE
 #define _CARAT &kp CARAT
+#define _AT_SIGN &kp AT_SIGN
 #define _PIPE &kp PIPE
 #define _DOLLAR &kp DOLLAR
 #define _PERCENT &kp PERCENT
@@ -48,7 +47,6 @@
 #define _ASTERISK &kp ASTERISK
 #define _EQUALS &kp EQUAL
 #define _AMPERSAND &kp AMPERSAND
-#define _CARET &kp CARET
 #define BACKTAB LS(TAB)
 #define _SEMICOLON &kp SEMICOLON
 #define UNDERLINE &kp UNDERSCORE
