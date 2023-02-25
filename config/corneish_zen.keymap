@@ -16,67 +16,163 @@
   };
 };
 
-/*
-* Mystery stuff above, my keymap below - AH
-*/
+// Mystery stuff above, my keymap below - AH
 
-//Alex's Layers
+// Alex's Layers
+// Layer definitions must remain in this order within the keymap because decisions were made. Sigh.
+
 #define ALPHA 0
-#define NUM 1
+#define TO_ALPHA &to ALPHA
+#define NUMBER 1
 #define SYMBOL 2
 #define PARENS 3
-#define NAV 4 
+#define NAVIGATION 4 
 
-#define BTAB LS(TAB)
-#define S_NUM &lt NUM S
-#define D_NAV &lt NAV D
-#define F_SYM &lt SYMBOL F
-#define J_PAR &lt PARENS J
-#define KOMMA &kp COMMA
-#define PERYD &kp DOT
-#define SL4SH &kp SLASH
+// names to make the keymap easier to read
+#define _ENTER &kp ENTER
+#define _SPACE &kp SPACE
+#define _ENTER &kp ENTER
+#define _SPACE &kp SPACE
+#define _TAB &kp TAB
+#define _COMMA &kp COMMA
+#define _PERIOD &kp DOT
+#define _TILDE &kp TILDE
+#define _PIPE &kp PIPE
+#define _DOLLAR &kp DOLLAR
+#define _SLASH &kp SLASH
+#define _PLUS &kp KP_PLUS
+#define _MINUS &kp KP_MINUS
+#define _ASTERISK &kp ASTERISK
+#define _EQUALS &kp EQUAL
+#define _AMPERSAND &kp AMPERSAND
+#define _CARET &kp CARET
+#define BACKTAB LS(TAB)
+#define _SEMICOLON &kp SEMICOLON
+#define UNDERLINE &kp UNDERSCORE
+#define L_SHIFT LEFT_SHIFT 
+#define R_SHIFT RIGHT_SHIFT
+#define _CAPSLOCK &kp CAPSLOCK
+#define CTRL_SQUOTE &mt RIGHT_CONTROL APOSTROPHE
+#define CTRL_BACKTAB &mt LEFT-CONTROL LS(TAB)
+#define ALT_ESC &mt LALT ESC
+#define CMD_TAB &mt LCMD TAB
+#define CMD_BKSPACE &mt RCMD BSPC
+#define R_ALT &kp RALT   
+
+//nice numbers
+#define _0_ &kp KP_NUMBER_0
+#define _1_ &kp KP_NUMBER_1
+#define _2_ &kp KP_NUMBER_2
+#define _3_ &kp KP_NUMBER_3
+#define _4_ &kp KP_NUMBER_4
+#define _5_ &kp KP_NUMBER_5
+#define _6_ &kp KP_NUMBER_6
+#define _7_ &kp KP_NUMBER_7
+#define _8_ &kp KP_NUMBER_8
+#define _9_ &kp KP_NUMBER_9
+
+#define _A_ &kp A
+#define _B_ &kp B
+#define _C_ &kp C
+#define _D_ &lt NAVIGATION D
+#define _E_ &kp E
+#define _F_ &lt SYMBOL F
+#define _G_ &kp G
+#define _H_ &kp H 
+#define _I_ &kp I
+#define _J_ &lt PARENS J
+#define _K_ &kp K
+#define _L_ &kp L
+#define _M_ &kp M
+#define _N_ &kp N
+#define _O_ &kp O
+#define _P_ &kp P
+#define _Q_ &kp Q
+#define _R_ &kp R
+#define _S_ &lt NUMBER S
+#define _T_ &kp T
+#define _U_ &kp U
+#define _V_ &kp V
+#define _W_ &kp W
+#define _X_ &kp X
+#define _Y_ &kp Y
+#define _Z_ &kp Z
+
+// and a spacer...
+#define _
 
 / {
   keymap {
     compatible = "zmk,keymap";
 
-     default_layer {
-       label = "ALPHA";
-       bindings = <
-&kp CAPS        &kp Q &kp W &kp E &kp R &kp T /* */ &kp Y &kp U &kp I &kp O &kp P     &to ALPHA 
-&mt LCTRL BTAB  &kp A S_NUM D_NAV F_SYM &kp G /* */ &kp H J_PAR &kp K &kp L &kp SEMI  &mt RCTRL APOS
-&kp LSHFT       &kp Z &kp X &kp C &kp V &kp B /* */ &kp N &kp M KOMMA PERYD SL4SH     &kp RSHIFT
-          &mt LALT ESC &mt LCMD ENTER &kp TAB /* */ &kp BSPC &mt RCMD SPACE &kp RALT   
-                  >;
-                };
-                lower_layer {
-                        label = "NUMBER";
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                          	        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
-                        >;
-                };
+    layer_0 {
+      label = "ALPHA";
+      bindings = <
 
-                raise_layer {
-                        label = "SYMBOL";
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                    	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
-                        >;
-                };
-        };
+         _CAPSLOCK  _Q_ _W_ _E_ _R_ _T_  ____  _Y_ _U_ _I_ _O_ _P_            TO_ALPHA 
+
+      CTRL_BACKTAB  _A_ _S_ _D_ _F_ _G_  ____  _H_ _J_ _K_ _L_ _SEMICOLON     CTRL_SQUOTE
+
+           L_SHIFT  _Z_ _X_ _C_ _V_ _B_  ____  _N_ _M_ _COMMA _PERIOD _SLASH  R_SHIFT
+
+                 ALT_ESC CMD_TAB _ENTER  ____  _SPACE CMD_BACKSPACE R_ALT 
+      >;
+    };
+
+    layer_1 {
+      label = "NUMBER";
+      bindings = <
+
+    &trans  &trans &trans &trans &trans &trans  ____  _EQUALS   _7_ _8_ _9_ _ENTER  _PLUS   
+
+    &trans  &trans &trans &trans &trans &trans  ____  _MINUS    _4_ _5_ _6_ _TAB    _MULTIPLY
+
+    &trans  &trans &trans &trans &trans &trans  ____  UNDERLINE _1_ _2_ _3_ _DOT    _DIVIDE    
+
+                        &trans  &trans  &trans  ____  &trans  _0_  &trans
+      >;
+    };
+
+    layer_2 {
+      label = "SYMBOL";
+      bindings = <
+
+    &trans  &trans &trans &trans &trans &trans  ____  _EQUALS   _AMPERSAND   _ASTERISK _PIPE  _TILDE     &trans
+
+    &trans  &trans &trans &trans &trans &trans  ____  _MINUS    _DOLLAR      _PERCENT  _CARAT _GRAVE     CTRL_SQUOTE
+
+    &trans  &trans &trans &trans &trans &trans  ____  UNDERLINE _EXCLAMATION _AT_SIGN  _HASH  _BACKSLASH _PLUS
+    
+                      &trans _ &trans _ &trans  ____  _SPACE _ CMD_BACKSPACE _ R_ALT
+      >; 
+    };
+
+    layer_3 {
+      label = "PARENS";
+      bindings = <
+
+    &trans  &trans &trans &trans &trans &trans  ____  _EQUALS   _AMPERSAND   _ASTERISK _PIPE  _TILDE     &trans
+
+    &trans  &trans &trans &trans &trans &trans  ____  _MINUS    _DOLLAR      _PERCENT  _CARAT _GRAVE     CTRL_SQUOTE
+
+    &trans  &trans &trans &trans &trans &trans  ____  UNDERLINE _EXCLAMATION _AT_SIGN  _HASH  _BACKSLASH _PLUS
+    
+                      &trans _ &trans _ &trans  ____  _SPACE _ CMD_BACKSPACE _ R_ALT
+      >; 
+    };
+
+    layer_3 {
+      label = "SYMBOL";
+      bindings = <
+
+    &trans  &trans &trans &trans &trans &trans  ____  _EQUALS   _AMPERSAND   _ASTERISK _PIPE  _TILDE     &trans
+
+    &trans  &trans &trans &trans &trans &trans  ____  _MINUS    _DOLLAR      _PERCENT  _CARAT _GRAVE     CTRL_SQUOTE
+
+    &trans  &trans &trans &trans &trans &trans  ____  UNDERLINE _EXCLAMATION _AT_SIGN  _HASH  _BACKSLASH _PLUS
+    
+                      &trans _ &trans _ &trans  ____  _SPACE _ CMD_BACKSPACE _ R_ALT
+      >; 
+    };
+  };
 };
