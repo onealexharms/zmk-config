@@ -27,38 +27,38 @@
 #define NAVIGATION 4 
 
 // names to make the keymap easier to read
-#define _ENTER &kp ENTER
-#define _SPACE &kp SPACE
-#define _TAB &kp TAB
-#define _COMMA &kp COMMA
-#define _PERIOD &kp DOT
-#define _TILDE &kp TILDE
-#define _GRAVE &kp GRAVE
-#define _CARET &kp CARET
-#define _AT_SIGN &kp AT_SIGN
-#define _BANG &kp EXCLAMATION
-#define _HASH &kp HASH
+#define ___ENTER__ &kp ENTER
+#define ___SPACE__ &kp SPACE
+#define ___TAB____ &kp TAB
+#define __COMMA___ &kp COMMA
+#define __PERIOD__ &kp DOT
+#define __TILDE___ &kp TILDE
+#define __GRAVE___ &kp GRAVE
+#define __CARET___ &kp CARET
+#define _AT_SIGN__ &kp AT_SIGN
+#define ___BANG___ &kp EXCLAMATION
+#define ___HASH___ &kp HASH
 #define _BACKSLASH &kp BACKSLASH
-#define _PIPE &kp PIPE
-#define _DOLLAR &kp DOLLAR
-#define _PERCENT &kp PERCENT
-#define _SLASH &kp SLASH
-#define _PLUS &kp KP_PLUS
-#define _MINUS &kp KP_MINUS
-#define _ASTERISK &kp ASTERISK
-#define _EQUALS &kp EQUAL
+#define ___PIPE___ &kp PIPE
+#define __DOLLAR__ &kp DOLLAR
+#define _PERCENT__ &kp PERCENT
+#define __SLASH___ &kp SLASH
+#define ___PLUS___ &kp KP_PLUS
+#define __MINUS___ &kp KP_MINUS
+#define _ASTERISK_ &kp ASTERISK
+#define __EQUALS__ &kp EQUAL
 #define _AMPERSAND &kp AMPERSAND
 #define _SEMICOLON &kp SEMICOLON
-#define UNDERLINE &kp UNDERSCORE
-#define L_SHIFT &kp LEFT_SHIFT 
-#define R_SHIFT &kp RIGHT_SHIFT
-#define _CAPSLOCK &kp CAPSLOCK
-#define CTRL_SQUOTE &mt RCTRL SINGLE_QUOTE
-#define CTRL_BACKTAB &mt LCTRL LS(TAB)
-#define CMD_TAB &mt LCMD TAB
-#define CMD_BACKSPACE &mt RCMD BSPC
-#define L_ALT_ESC &mt LALT ESC
-#define R_ALT_ESC &mt RALT ESC  
+#define _UNDERLINE &kp UNDERSCORE
+#define _L_SHIFT__ &kp LEFT_SHIFT 
+#define _R_SHIFT__ &kp RIGHT_SHIFT
+#define _CAPSLOCK_ &kp CAPSLOCK
+#define CTL_SQUOTE &mt RCTRL SINGLE_QUOTE
+#define CTL_BAKTAB &mt LCTRL LS(TAB)
+#define _CMD_TAB__ &mt LCMD TAB
+#define CMD_BKSPCE &mt RCMD BSPC
+#define _L_ALT_ESC &mt LALT ESC
+#define _R_ALT_ESC &mt RALT ESC  
   
 #define L_PAREN &kp LEFT_PARENTHESIS
 #define R_PAREN &kp RIGHT_PARENTHESIS
@@ -120,26 +120,26 @@
       label = "ALPHA";
       bindings = <
 
-         _CAPSLOCK  _Q_ _W_ _E_ _R_ _T_        _Y_   _U_  _I_  _O_  _P_            TO_ALPHA 
+      _CAPSLOCK_  _Q_ _W_ _E_ _R_ _T_        _Y_   _U_  _I_  _O_  _P_            TO_ALPHA 
 
-      CTRL_BACKTAB  _A_ _S_ _D_ _F_ _G_        _H_   _J_  _K_ _L_ _SEMICOLON     CTRL_SQUOTE
+      CTL_BAKTAB  _A_ _S_ _D_ _F_ _G_        _H_   _J_  _K_ _L_ _SEMICOLON     CTL_SQUOTE
 
-           L_SHIFT  _Z_ _X_ _C_ _V_ _B_        _N_ _M_ _COMMA _PERIOD _SLASH  R_SHIFT
+      _L_SHIFT__  _Z_ _X_ _C_ _V_ _B_        _N_ _M_ __COMMA___ __PERIOD___ __SLASH___  _R_SHIFT__
 
-               L_ALT_ESC _ENTER CMD_TAB        CMD_BACKSPACE _SPACE R_ALT_ESC 
+      _L_ALT_ESC ___ENTER__ _CMD_TAB__        CMD_BKSPCE ___SPACE__ _R_ALT_ESC 
       >;
     };
 
     layer_1 { 
       label = "NUMBER";
       bindings = <
-    __________  __________ __________ __________ __________ __________        _EQUALS   _7_ _8_ _9_ _ENTER  _PLUS   
+    __________ __________ __________ __________ __________ __________   __EQUALS__  _7_ _8_ _9_ ___ENTER__  ___PLUS___  
 
-    __________  __________ __________ __________ __________ __________        _MINUS    _4_ _5_ _6_ _TAB    _ASTERISK
+    __________ __________ __________ __________ __________ __________   __MINUS___    _4_ _5_ _6_ ___TAB____    _ASTERISK_
 
-    __________  __________ __________ __________ __________ __________        UNDERLINE _1_ _2_ _3_ _PERIOD _SLASH    
+    __________ __________ __________ __________ __________ __________   _UNDERLINE _1_ _2_ _3_ __PERIOD__ __SLASH___    
 
-                                 __________  __________  __________        __________  _0_  __________
+                                     __________ __________ __________   __________  _0_  __________
       >;
     };
 
@@ -147,13 +147,13 @@
       label = "SYMBOL";
       bindings = <
 
-    __________ __________ __________ __________ __________ __________        _EQUALS   _AMPERSAND   _ASTERISK _PIPE  _TILDE     __________
+    __________ __________ __________ __________ __________ __________        __EQUALS__ _AMPERSAND _ASTERISK_ ___PIPE___ __TILDE___ __________
 
-    __________ __________ __________ __________ __________ __________        _MINUS    _DOLLAR      _PERCENT  _CARET _GRAVE     CTRL_SQUOTE
+    __________ __________ __________ __________ __________ __________        __MINUS___ __DOLLAR__ _PERCENT__ __CARET___ __GRAVE___ CTL_SQUOTE
 
-    __________ __________ __________ __________ __________ __________        UNDERLINE _BANG        _AT_SIGN  _HASH  _BACKSLASH _PLUS
+    __________ __________ __________ __________ __________ __________        _UNDERLINE ___BANG___ _AT_SIGN__ ___HASH___ _BACKSLASH ___PLUS___
     
-                                  __________ __________ __________        CMD_BACKSPACE _SPACE R_ALT_ESC
+                                     __________ __________ __________        CMD_BKSPCE ___SPACE__ _R_ALT_ESC
       >; 
     };
 
@@ -161,13 +161,13 @@
       label = "PARENS";
       bindings = <
 
-    __________  __________ __________ L_BRACKET R_BRACKET __________        __________ __________ __________ __________ __________  __________        
+    __________ __________ __________ L_BRACKET R_BRACKET __________        __________ __________ __________ __________ __________  __________        
 
-    __________  __________ L_ANGLE   L_PAREN   R_PAREN R_ANGLE       __________ __________ __________ __________ __________  __________        
+    __________ __________ L_ANGLE__ L_PAREN__ R_PAREN__ R_ANGLE       __________ __________ __________ __________ __________  __________        
 
-    __________  __________ __________ L_CURLY   R_CURLY __________       __________ __________ __________ __________ __________  __________       
+    __________ __________ __________ L_CURLY   R_CURLY __________       __________ __________ __________ __________ __________  __________       
     
-                      __________ _ __________ _ __________        __________ _ __________ _ __________
+                                 __________ __________ __________        __________ __________ __________
       >; 
     };
 
@@ -175,13 +175,13 @@
       label = "NAVIGATION";
       bindings = <
 
-    &trans  &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans  &trans        
+    __________  __________ __________ __________ __________ __________        __________ __________ __________ __________ __________  __________        
 
-    &trans  &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans  &trans        
+    __________  __________ __________ __________ __________ __________        __________ __________ __________ __________ __________  __________        
 
-    &trans  &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans  &trans       
+    __________  __________ __________ __________ __________ __________        __________ __________ __________ __________ __________  __________       
     
-                      &trans _ &trans _ &trans        &trans _ &trans _ &trans
+                      __________ __________ __________        __________ __________ __________
       >; 
     };
   };
