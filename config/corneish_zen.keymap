@@ -70,43 +70,43 @@
 #define _R_ANGLE__ &kp GREATER_THAN
 
 //nice numbers & letters
-#define _0_ &kp KP_NUMBER_0
-#define _1_ &kp KP_NUMBER_1
-#define _2_ &kp KP_NUMBER_2
-#define _3_ &kp KP_NUMBER_3
-#define _4_ &kp KP_NUMBER_4
-#define _5_ &kp KP_NUMBER_5
-#define _6_ &kp KP_NUMBER_6
-#define _7_ &kp KP_NUMBER_7
-#define _8_ &kp KP_NUMBER_8
-#define _9_ &kp KP_NUMBER_9
+#define ____0_____ &kp KP_NUMBER_0
+#define ____1_____ &kp KP_NUMBER_1
+#define ____2_____ &kp KP_NUMBER_2
+#define ____3_____ &kp KP_NUMBER_3
+#define ____4_____ &kp KP_NUMBER_4
+#define ____5_____ &kp KP_NUMBER_5
+#define ____6_____ &kp KP_NUMBER_6
+#define ____7_____ &kp KP_NUMBER_7
+#define ____8_____ &kp KP_NUMBER_8
+#define ____9_____ &kp KP_NUMBER_9
 
-#define _A_ &kp A
-#define _B_ &kp B
-#define _C_ &kp C
-#define _D_ &lt NAVIGATION D
-#define _E_ &kp E
-#define _F_ &lt SYMBOL F
-#define _G_ &kp G
-#define _H_ &kp H 
-#define _I_ &kp I
-#define _J_ &lt PARENS J
-#define _K_ &kp K
-#define _L_ &kp L
-#define _M_ &kp M
-#define _N_ &kp N
-#define _O_ &kp O
-#define _P_ &kp P
-#define _Q_ &kp Q
-#define _R_ &kp R
-#define _S_ &lt NUMBER S
-#define _T_ &kp T
-#define _U_ &kp U
-#define _V_ &kp V
-#define _W_ &kp W
-#define _X_ &kp X
-#define _Y_ &kp Y
-#define _Z_ &kp Z
+#define ____A_____ &kp A
+#define ____B_____ &kp B
+#define ____C_____ &kp C
+#define ____D_____ &lt NAVIGATION D
+#define ____E_____ &kp E
+#define ____F_____ &lt SYMBOL F
+#define ____G_____ &kp G
+#define ____H_____ &kp H 
+#define ____I_____ &kp I
+#define ____J_____ &lt PARENS J
+#define ____K_____ &kp K
+#define ____L_____ &kp L
+#define ____M_____ &kp M
+#define ____N_____ &kp N
+#define ____O_____ &kp O
+#define ____P_____ &kp P
+#define ____Q_____ &kp Q
+#define ____R_____ &kp R
+#define ____S_____ &lt NUMBER S
+#define ____T_____ &kp T
+#define ____U_____ &kp U
+#define ____V_____ &kp V
+#define ____W_____ &kp W
+#define ____X_____ &kp X
+#define ____Y_____ &kp Y
+#define ____Z_____ &kp Z
 
 // and a spacer...
 #define _
@@ -119,11 +119,11 @@
     layer_0 {
       label = "ALPHA";
       bindings = <
-    _CAPSLOCK_ _Q_        _W_        _E_        _R_        _T_         _Y_        _U_        _I_        _O_        _P_        _TO_ALPHA_
+    _CAPSLOCK_ ____Q_____ ____W_____ ____E_____ ____R_____ ____T_____  ____Y_____ ____U_____ ____I_____ ____O_____ ____P_____ _TO_ALPHA_
 
-    CTL_BAKTAB _A_        _S_        _D_        _F_        _G_         _H_        _J_        _K_        _L_        _SEMICOLON CTL_SQUOTE
+    CTL_BAKTAB ____A_____ ____S_____ ____D_____ ____F_____ ____G_____  ____H_____ ____J_____ ____K_____ ____L_____ _SEMICOLON CTL_SQUOTE
 
-    _L_SHIFT__ _Z_        _X_        _C_        _V_        _B_         _N_        _M_        __COMMA___ __PERIOD__ __SLASH___ _R_SHIFT__
+    _L_SHIFT__ ____Z_____ ____X_____ ____C_____ ____V_____ ____B_____  ____N_____ ____M_____ __COMMA___ __PERIOD__ __SLASH___ _R_SHIFT__
 
                                      _L_ALT_ESC ___ENTER__ _CMD_TAB__  CMD_BKSPCE ___SPACE__ _R_ALT_ESC
       >;
@@ -132,13 +132,13 @@
     layer_1 { 
       label = "NUMBER";
       bindings = <
-    __________ __________ __________ __________ __________ __________  __EQUALS__ _7_ _8_ _9_ ___ENTER__ ___PLUS___
+    __________ __________ __________ __________ __________ __________  __EQUALS__ ____7_____ ____8_____ ____9_____ ___ENTER__ ___PLUS___
 
-    __________ __________ __________ __________ __________ __________  __MINUS___ _4_ _5_ _6_ ___TAB____ _ASTERISK_
+    __________ __________ __________ __________ __________ __________  __MINUS___ ____4_____ ____5_____ ____6_____ ___TAB____ _ASTERISK_
 
-    __________ __________ __________ __________ __________ __________  _UNDERLINE _1_ _2_ _3_ __PERIOD__ __SLASH___
+    __________ __________ __________ __________ __________ __________  _UNDERLINE ____1_____ ____2_____ ____3_____ __PERIOD__ __SLASH___
 
-                                     __________ __________ __________  __________ _0_ __________
+                                     __________ __________ __________  __________ ____0_____ __________
       >;
     };
 
