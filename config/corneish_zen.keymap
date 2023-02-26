@@ -70,16 +70,16 @@
 #define _R_ANGLE__ &kp GREATER_THAN
 
 //nice numbers & letters
-#define ____0_____ &kp KP_NUMBER_0
-#define ____1_____ &kp KP_NUMBER_1
-#define ____2_____ &kp KP_NUMBER_2
-#define ____3_____ &kp KP_NUMBER_3
-#define ____4_____ &kp KP_NUMBER_4
-#define ____5_____ &kp KP_NUMBER_5
-#define ____6_____ &kp KP_NUMBER_6
-#define ____7_____ &kp KP_NUMBER_7
-#define ____8_____ &kp KP_NUMBER_8
-#define ____9_____ &kp KP_NUMBER_9
+#define _0_ &kp KP_NUMBER_0
+#define _1_ &kp KP_NUMBER_1
+#define _2_ &kp KP_NUMBER_2
+#define _3_ &kp KP_NUMBER_3
+#define _4_ &kp KP_NUMBER_4
+#define _5_ &kp KP_NUMBER_5
+#define _6_ &kp KP_NUMBER_6
+#define _7_ &kp KP_NUMBER_7
+#define _8_ &kp KP_NUMBER_8
+#define _9_ &kp KP_NUMBER_9
 
 #define _A_ &kp A
 #define _B_ &kp B
@@ -132,13 +132,13 @@
     layer_1 { 
       label = "NUMBER";
       bindings = <
-    __________ __________ __________ __________ __________ __________  __EQUALS__ ____7_____ ____8_____ ____9_____ ___ENTER__ __PLUS____
+    __________ __________ __________ __________ __________ __________  __EQUALS__ _7_ _8_ _9_ ___ENTER__ __PLUS____
 
-    __________ __________ __________ __________ __________ __________  __MINUS___ ____4_____ ____5_____ ____6_____ ___TAB____ _ASTERISK_
+    __________ __________ __________ __________ __________ __________  __MINUS___ _4_ _5_ _6_ ___TAB____ _ASTERISK_
 
-    __________ __________ __________ __________ __________ __________  _UNDERLINE ____1_____ ____2_____ ____3_____ __PERIOD__ __SLASH___
+    __________ __________ __________ __________ __________ __________  _UNDERLINE _1_ _2_ _3_ __PERIOD__ __SLASH___
 
-                                     __________ __________ __________  __________ ____0_____ __________
+                                     __________ __________ __________  __________ _0_ __________
       >;
     };
 
