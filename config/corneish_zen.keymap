@@ -16,7 +16,7 @@
   };
 };
 
-// Stuff from the tin above, my keymap below - AH
+// Mystery stuff above, my keymap below - AH
 
 // Alex's Layers // Layer definitions must remain in this order within the keymap because decisions were made. Sigh.   
 #define ALPHA 0
@@ -48,7 +48,7 @@
 #define _ASTERISK_ &kp ASTERISK
 #define __EQUALS__ &kp EQUAL
 #define _AMPERSAND &kp AMPERSAND
-#define SEMICOLON_ &kp SEMICOLON
+#define _SEMICOLON &kp SEMICOLON
 #define _UNDERLINE &kp UNDERSCORE
 #define _L_SHIFT__ &kp LEFT_SHIFT 
 #define _R_SHIFT__ &kp RIGHT_SHIFT
@@ -86,36 +86,36 @@
 #define ____8_____ &kp KP_NUMBER_8
 #define ____9_____ &kp KP_NUMBER_9
 
-#define A_________ &kp A
-#define B_________ &kp B
-#define C_________ &kp C
-#define D_NAV_____ &lt NAVIGATION D
-#define E_________ &kp E
-#define F_SYMBOL__ &lt SYMBOL F
-#define G_________ &kp G
-#define H_________ &kp H 
-#define I_________ &kp I
-#define J_PARENS__ &lt PARENS J
-#define K_________ &kp K
-#define L_________ &kp L
-#define M_________ &kp M
-#define N_________ &kp N
-#define O_________ &kp O
-#define P_________ &kp P
-#define Q_________ &kp Q
-#define R_________ &kp R
-#define S_NUM_____ &lt NUMBER S
-#define T_________ &kp T
-#define U_________ &kp U
-#define V_________ &kp V
-#define W_________ &kp W
-#define X_________ &kp X
-#define Y_________ &kp Y
-#define Z_________ &kp Z
+#define ____A_____ &kp A
+#define ____B_____ &kp B
+#define ____C_____ &kp C
+#define ____D_____ &lt NAVIGATION D
+#define ____E_____ &kp E
+#define ____F_____ &lt SYMBOL F
+#define ____G_____ &kp G
+#define ____H_____ &kp H 
+#define ____I_____ &kp I
+#define ____J_____ &lt PARENS J
+#define ____K_____ &kp K
+#define ____L_____ &kp L
+#define ____M_____ &kp M
+#define ____N_____ &kp N
+#define ____O_____ &kp O
+#define ____P_____ &kp P
+#define ____Q_____ &kp Q
+#define ____R_____ &kp R
+#define ____S_____ &lt NUMBER S
+#define ____T_____ &kp T
+#define ____U_____ &kp U
+#define ____V_____ &kp V
+#define ____W_____ &kp W
+#define ____X_____ &kp X
+#define ____Y_____ &kp Y
+#define ____Z_____ &kp Z
 
 // and a spacer...
 #define _
-#define __________ &trans//transparent
+#define __________ &trans//parent
 
 / {
   keymap {
@@ -124,11 +124,11 @@
     layer_0 {
       label = "ALPHA";
       bindings = <
-    _CAPSLOCK_ Q_________ W_________ E_________ R_________ T_________  Y_________ U_________ I_________ O_________ P_________ __________
+    _CAPSLOCK_ ____Q_____ ____W_____ ____E_____ ____R_____ ____T_____  ____Y_____ ____U_____ ____I_____ ____O_____ ____P_____ _TO_ALPHA_
 
-    CTL_BAKTAB A_________ S_NUM______ D_NAV_____ F_SYMBOL_ G_________  H_________ J_PARENS__ K_________ L_________ SEMICOLON_ CTL_SQUOTE
+    CTL_BAKTAB ____A_____ ____S_____ ____D_____ ____F_____ ____G_____  ____H_____ ____J_____ ____K_____ ____L_____ _SEMICOLON CTL_SQUOTE
 
-    _L_SHIFT__ Z_________ X_________ C_________ V_________ B_________  N_________ M_________ __COMMA___ __PERIOD__ __SLASH___ _R_SHIFT__
+    _L_SHIFT__ ____Z_____ ____X_____ ____C_____ ____V_____ ____B_____  ____N_____ ____M_____ __COMMA___ __PERIOD__ __SLASH___ _R_SHIFT__
 
                                      _L_ALT_ESC ___ENTER__ _CMD_TAB__  CMD_BKSPCE ___SPACE__ _R_ALT_ESC
       >;
@@ -137,11 +137,11 @@
     layer_1 { 
       label = "NUMBER";
       bindings = <
-    __________ __________ __________ __________ __________ __________  __EQUALS__ ____7_____ ____8_____ ____9_____ ___ENTER__ __________
+    __________ __________ __________ __________ __________ __________  __EQUALS__ ____7_____ ____8_____ ____9_____ ___ENTER__ ___PLUS___
 
     __________ __________ __________ __________ __________ __________  __MINUS___ ____4_____ ____5_____ ____6_____ ___TAB____ _ASTERISK_
 
-    __________ __________ __________ __________ __________ __________  ___PLUS___ ____1_____ ____2_____ ____3_____ __PERIOD__ __SLASH___
+    __________ __________ __________ __________ __________ __________  _UNDERLINE ____1_____ ____2_____ ____3_____ __PERIOD__ __SLASH___
 
                                      __________ __________ __________  __________ ____0_____ __________
       >;
