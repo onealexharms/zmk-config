@@ -18,9 +18,8 @@
 
 // Mystery stuff above, my keymap below - AH
 
-// Alex's Layers // Layer definitions must remain in this order within the keymap because decisions were made. Sigh.   
+// Alex's Layers // Layer definitions must remain in this order within the keymap. 
 #define ALPHA 0
-#define _TO_ALPHA_ &to ALPHA
 #define NUMBER 1
 #define SYMBOL 2
 #define PARENS 3
@@ -33,7 +32,7 @@
 #define __COMMA___ &kp COMMA
 #define __PERIOD__ &kp PERIOD
 #define __TILDE___ &kp TILDE
-#define __GRAVE___ &kp GRAVE
+#define _BACKTICK_ &kp GRAVE
 #define __CARET___ &kp CARET
 #define _AT_SIGN__ &kp AT_SIGN
 #define ___BANG___ &kp EXCLAMATION
@@ -56,10 +55,15 @@
 #define CTL_SQUOTE &mt RCTRL SINGLE_QUOTE
 #define CTL_BAKTAB &mt LCTRL LS(TAB)
 #define _CMD_TAB__ &mt LCMD TAB
+#define _CMD_ENTR_ &mt LCMD ENTER
 #define CMD_BKSPCE &mt RCMD BSPC
+
 #define _L_ALT_ESC &mt LALT ESC
 #define _R_ALT_ESC &mt RALT ESC  
-  
+
+#define _TO_ALPHA_ &to ALPHA
+
+//parens layer with escape  
 #define _L_PAREN__ &kp LEFT_PARENTHESIS
 #define _R_PAREN__ &kp RIGHT_PARENTHESIS
 #define _L_BRACKET &kp LEFT_BRACKET
@@ -68,7 +72,7 @@
 #define _R_CURLY__ &kp RIGHT_BRACE
 #define _L_ANGLE__ &kp LESS_THAN
 #define _R_ANGLE__ &kp GREATER_THAN
-
+#define __ESCAPE__ &kp ESCAPE
 #define ___LEFT___ &kp LEFT
 #define __RIGHT___ &kp RIGHT
 #define ____UP____ &kp UP
@@ -89,13 +93,13 @@
 #define ____A_____ &kp A
 #define ____B_____ &kp B
 #define ____C_____ &kp C
-#define ____D_____ &lt NAVIGATION D
+#define __D_NAV___ &lt NAVIGATION D
 #define ____E_____ &kp E
-#define ____F_____ &lt SYMBOL F
+#define _F_SYMBOL_ &lt SYMBOL F
 #define ____G_____ &kp G
 #define ____H_____ &kp H 
 #define ____I_____ &kp I
-#define ____J_____ &lt PARENS J
+#define _J_PARENS_ &lt PARENS J
 #define ____K_____ &kp K
 #define ____L_____ &kp L
 #define ____M_____ &kp M
@@ -104,7 +108,7 @@
 #define ____P_____ &kp P
 #define ____Q_____ &kp Q
 #define ____R_____ &kp R
-#define ____S_____ &lt NUMBER S
+#define _S_NUMBER_ &lt NUMBER S
 #define ____T_____ &kp T
 #define ____U_____ &kp U
 #define ____V_____ &kp V
@@ -124,26 +128,26 @@
     layer_0 {
       label = "ALPHA";
       bindings = <
-    _CAPSLOCK_ ____Q_____ ____W_____ ____E_____ ____R_____ ____T_____  ____Y_____ ____U_____ ____I_____ ____O_____ ____P_____ _TO_ALPHA_
+    _CAPSLOCK_ ____Q_____ ____W_____ ____E_____ ____R_____ ____T_____  ____Y_____ ____U_____ ____I_____ ____O_____ ____P_____ __________
 
-    CTL_BAKTAB ____A_____ ____S_____ ____D_____ ____F_____ ____G_____  ____H_____ ____J_____ ____K_____ ____L_____ _SEMICOLON CTL_SQUOTE
+    CTL_BAKTAB ____A_____ _S_NUMBER_ __D_NAV___ _F_SYMBOL_ ____G_____  ____H_____ _J_PARENS_ ____K_____ ____L_____ _SEMICOLON CTL_SQUOTE
 
     _L_SHIFT__ ____Z_____ ____X_____ ____C_____ ____V_____ ____B_____  ____N_____ ____M_____ __COMMA___ __PERIOD__ __SLASH___ _R_SHIFT__
 
-                                     _L_ALT_ESC ___ENTER__ _CMD_TAB__  CMD_BKSPCE ___SPACE__ _R_ALT_ESC
+                                     _L_ALT_ESC ___TAB____ _CMD_ENTR_  CMD_BKSPCE ___SPACE__ _R_ALT_ESC
       >;
     };
 
     layer_1 { 
       label = "NUMBER";
       bindings = <
-    __________ __________ __________ __________ __________ __________  __EQUALS__ ____7_____ ____8_____ ____9_____ ___ENTER__ ___PLUS___
+    __________ __________ __________ __________ __________ __________  __EQUALS__ ____7_____ ____8_____ ____9_____ ___ENTER__ __________
 
     __________ __________ __________ __________ __________ __________  __MINUS___ ____4_____ ____5_____ ____6_____ ___TAB____ _ASTERISK_
 
     __________ __________ __________ __________ __________ __________  _UNDERLINE ____1_____ ____2_____ ____3_____ __PERIOD__ __SLASH___
 
-                                     __________ __________ __________  __________ ____0_____ __________
+                                     __________ __________ __________  ___PLUS___ ____0_____ __________
       >;
     };
 
@@ -153,7 +157,7 @@
 
     __________ __________ __________ __________ __________ __________  __EQUALS__ _AMPERSAND _ASTERISK_ ___PIPE___ __TILDE___ __________
 
-    __________ __________ __________ __________ __________ __________  __MINUS___ __DOLLAR__ _PERCENT__ __CARET___ __GRAVE___ CTL_SQUOTE
+    __________ __________ __________ __________ __________ __________  __MINUS___ __DOLLAR__ _PERCENT__ __CARET___ _BACKTICK_ CTL_SQUOTE
 
     __________ __________ __________ __________ __________ __________  _UNDERLINE ___BANG___ _AT_SIGN__ ___HASH___ _BACKSLASH ___PLUS___
     
@@ -171,7 +175,7 @@
 
     __________ __________ __________ _L_CURLY__ _R_CURLY__ __________  __________ __________ __________ __________ __________ __________
     
-                                     __________ __________ __________  __________ __________ __________
+                                     __________ __________ __ESCAPE__  __________ __________ __________
       >; 
     };
 
