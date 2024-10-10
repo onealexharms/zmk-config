@@ -55,7 +55,7 @@
 #define CTL_SQUOTE &mt RCTRL SINGLE_QUOTE
 #define CTL_BAKTAB &mt LCTRL LS(TAB)
 #define _CMD_TAB__ &mt LCMD TAB
-#define _CMD_ENTR_ &mt LCMD ENTER
+#define _CMD_ENTER &mt LCMD ENTER
 #define CMD_BKSPCE &mt RCMD BSPC
 
 #define _L_ALT_ESC &mt LALT ESC
@@ -143,7 +143,7 @@
 
     _L_SHIFT__ ____Z_____ ____X_____ ____C_____ ____V_____ ____B_____  ____N_____ ____M_____ __COMMA___ __PERIOD__ __SLASH___ _R_SHIFT__
 
-                                  _L_ALT_ESC ___TAB____ _CMD_ENTER        CMD_BKSPCE ___SPACE__ _R_ALT_ESC
+                                  _L_ALT_ESC ___TAB____ _CMD_ENTER        CMD_BKSPCE ___SPACE__ _CMD_ENTER
       >;
     };
 
