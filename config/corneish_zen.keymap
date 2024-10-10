@@ -133,12 +133,9 @@
         bindings = <&kp>, <&kp>;
     };
   };
-};
-
-/ {
   keymap {
     compatible = "zmk,keymap";
-
+  
     layer_0 {
       label = "ALPHA";
       bindings = <
