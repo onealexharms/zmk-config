@@ -17,17 +17,6 @@
 };
 
 // Mystery stuff above, my keymap below - AH
-/ {
-behaviors {
-  rpi: require_prior_idle {
-    compatible = "zmk,behavior-hold-tap";
-    #binding-cells = <2>;
-    flavor = "tap-preferred";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <200>;
-  };
-};
-};
 
 // Alex's Layers // Layer definitions must remain in this order within the keymap. 
 #define ALPHA 0
@@ -133,6 +122,15 @@ behaviors {
 #define __________ &trans//parent
 
 / {
+behaviors {
+  rpi: require_prior_idle {
+    compatible = "zmk,behavior-hold-tap";
+    #binding-cells = <2>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <200>;
+  };
+};
   keymap {
     compatible = "zmk,keymap";
   
