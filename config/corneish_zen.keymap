@@ -17,6 +17,17 @@
 };
 
 // Mystery stuff above, my keymap below - AH
+/ {
+behaviors {
+  rpi: require_prior_idle {
+    compatible = "zmk,behavior-hold-tap";
+    #binding-cells = <2>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <200>;
+  };
+};
+};
 
 // Alex's Layers // Layer definitions must remain in this order within the keymap. 
 #define ALPHA 0
@@ -134,7 +145,7 @@
 
     _L_SHIFT__ ____Z_____ ____X_____ ____C_____ ____V_____ ____B_____  ____N_____ ____M_____ __COMMA___ __PERIOD__ __SLASH___ _R_SHIFT__
 
-                                  _L_ALT_ESC ___TAB____ _CMD_ENTER        CMD_BKSPCE ___SPACE__ _CMD_ENTER
+                                  _L_ALT_ESC ___TAB____ _CMD_ENTER        CMD_BKSPCE ___SPACE__ _R_ALT_ESC
       >;
     };
 
