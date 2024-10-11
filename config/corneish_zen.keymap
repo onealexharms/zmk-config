@@ -55,8 +55,8 @@
 #define CTL_SQUOTE &mt RCTRL SINGLE_QUOTE
 #define CTL_BAKTAB &mt LCTRL LS(TAB)
 #define _CMD_TAB__ &mt LCMD TAB
-#define _CMD_ENTER &mt LCMD ENTER
-#define CMD_BKSPCE &mt RCMD BSPC
+#define _CMD_ENTER &rpi LCMD ENTER
+#define CMD_BKSPCE &rpi RCMD BSPC
 
 #define _L_ALT_ESC &mt LALT ESC
 #define _R_ALT_ESC &mt RALT ESC  
